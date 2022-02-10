@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  node:
+    build: ./docker/node
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "yarn start"
+    tty: true
+    ports:
+      - "4000:4000"
