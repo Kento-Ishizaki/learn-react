@@ -1,11 +1,11 @@
-import { VFC, useState } from 'react'
+import { useState } from 'react'
 
-const Hook: VFC = () => {
+function Hook() {
   const [count, setCount] = useState(1)
 
   return (
     <>
-      <p>1回クリックした</p>
+      <p>{count}回クリックした</p>
       <button type="button" onClick={() => setCount(count + 1)}>
         <p>ボタン</p>
       </button>
