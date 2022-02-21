@@ -8,6 +8,7 @@ import Shuttle from "../assets/images/shuttle.png";
 const Chat = (props) => {
   const isQuestion = props.type === "question";
   const classes = isQuestion ? "p-chat__row" : "p-chat__reverse";
+  console.log(props.text);
 
   return (
     <ListItem className={classes}>
